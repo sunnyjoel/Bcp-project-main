@@ -1,10 +1,11 @@
 # BCP-online store
- A complete Online Store
+
+ A Simple Online Store
 
  Languages used:
- Front-end:- Html,CSS,JavaScript
- Back-end :- Nodejs
- Database :- MongoDb
+ **Front-end**:- Html,CSS,JavaScript
+ **Back-end** :- Nodejs
+ **Database** :- MongoDb
 
 ## Features
 
