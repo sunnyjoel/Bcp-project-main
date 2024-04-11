@@ -1,5 +1,4 @@
-//const stripe = require('stripe')('sk_test_51KOxVjSG64QDRRDDl5Fj3og8154LWdtxErStdZuEn3UbwFU7bMuMrLR9JRyTAPNxdAOJRryxyneegVfzQOdtXH2V00xJ548uRf')
-const stripe = require('stripe')('sk_test_51OMRINSJOsPAcJdGb9ElhqHNdp1Ywcyu71JcW0LN9jWQnWy6syw8mrH3X5ELrYhWcNSDUfGyC0P1de7p3YevQQUB005i1PttJD')
+const stripe = require('stripe')('enter your key')
 const Order = require('../models/order.model');
 const User = require('../models/user.model');
 
