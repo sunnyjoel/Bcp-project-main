@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+html {
+  font-family: "Montserrat", "sans-serif";
+
+  --color-gray-50: rgb(243, 236, 230);
+  --color-gray-100: rgb(207, 201, 195);
+  --color-gray-300: rgb(99, 92, 86);
+  --color-gray-400: rgb(70, 65, 60);
+  --color-gray-500: rgb(37, 34, 31);
+  --color-gray-600: rgb(32, 29, 26);
+  --color-gray-700: rgb(31, 26, 22);
+
+  --color-primary-50: rgb(253, 224, 200);
+  --color-primary-100: rgb(253, 214, 183);
+  --color-primary-200: rgb(250, 191, 143);
+  --color-primary-400: rgb(223, 159, 41);
+  --color-primary-500: rgb(212, 136, 14);
+  --color-primary-700: rgb(212, 120, 14);
+  --color-primary-200-contrast: rgb(100, 46, 2);
+  --color-primary-500-contrast: white;
+
+  --color-error-100: rgb(255, 192, 180);
+  --color-error-500: rgb(199, 51, 15);
+
+  --color-primary-500-bg: rgb(63, 60, 58);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+
+  --border-radius-small: 4px;
+  --border-radius-medium: 6px;
+
+  --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+ /* background-image: url("https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-attachment: fixed; 
+  background-color:rgb(228, 207, 185); */
+  background-color: var(--color-gray-500);
+  color: var(--color-gray-100);
+  margin: 0;
+}
+
+
+main {
+  width: 90%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+ul, 
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary-400);
+}
+
+.btn {
+  cursor: pointer;
+  font: inherit;
+  padding: var(--space-2) var(--space-6);
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-500-contrast);
+  border: 1px solid var(--color-primary-500);
+  border-radius: var(--border-radius-small);
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+}
+
+.btn-alt {
+  background-color: transparent;
+  color: var(--color-primary-500);
+}
+
+.btn-alt:hover,
+.btn-alt:active {
+  background-color: var(--color-primary-500-bg);
+}
+
+.alert {
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-error-100);
+  color: var(--color-error-500);
+  padding: var(--space-4);
+}
+
+.alert h2 {
+  font-size: 1rem;
+  margin: var(--space-2) 0;
+  text-transform: uppercase;
+}
+
+.alert p {
+  margin: var(--space-2) 0;
+}
+
+.badge {
+  margin-left: var(--space-2);
+  padding: 0.15rem var(--space-4);
+  border-radius: 10rem;
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-500-contrast);
+}
+
+
+
+
+
+
+
+
+/* Style the image container */
+.image-container {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 80rem; /* Adjust maximum width as needed */
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden; /* Ensure images don't overflow */
+  position: relative;
+}
+
+/* Style individual images */
+.image-container img {
+  width: 100%; /* Set default width for all images */
+  height: 100%; /* Set default height for all images */
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Optional: Add transition effect */
+}
+
+/* Keyframe animation for image change */
+@keyframes changeImage {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Apply animation to images */
+.image-container img:nth-child(1) {
+  animation: changeImage 10s infinite; /* Change every 5 seconds */
+}
+
+.image-container img:nth-child(2) {
+  animation: changeImage 10s infinite; /* Change every 5 seconds */
+  animation-delay: 5s; /* Delay for second image */
+}

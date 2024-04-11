@@ -1,0 +1,37 @@
+<%- include('../../shared/includes/head', { pageTitle: 'All Products' }) %>
+<link rel="stylesheet" href="/styles/products.css">
+</head>
+<body>
+  <%- include('../../shared/includes/header') %>
+
+  <div class="image-container">
+    <img src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+    <img src="https://images.unsplash.com/photo-1526470498-9ae73c665de8?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2">
+  </div>
+
+  <main>
+
+   
+<!--     
+    <div class="slider">
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1526470498-9ae73c665de8?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+      </div>
+    </div> -->
+    
+    <h1 id="allprod">All Products</h1>
+    <ul id="products-grid">
+      <% for (const product of products) { %>
+        <li>
+          <%- include('../../shared/includes/product-item', { product: product }) %>
+        </li>
+      <% } %>
+    </ul>
+  </main>
+<%- include('../../shared/includes/footer') %>

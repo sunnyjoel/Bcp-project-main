@@ -1,0 +1,22 @@
+ <!-- <%- include('../../shared/includes/head', { pageTitle: 'OTP Verification' }) %>
+</head>
+<body>
+  <%- include('../../shared/includes/header') %>
+  <main>
+    <h1>OTP Verification</h1>
+    <% if (inputData.errorMessage) { %>
+      <section class="alert">
+        <h2>Error</h2>
+        <p><%= inputData.errorMessage %></p>
+      </section>
+    <% } %>
+    <form action="/verify-otp" method="POST">
+      <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+      <p>
+        <label for="otp">Enter OTP</label>
+        <input type="text" id="otp" name="otp" required>
+      </p>
+      <button class="btn">Verify OTP</button>
+    </form>
+  </main>
+<%- include('../../shared/includes/footer') %>  -->
